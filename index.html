@@ -4,11 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Task 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
+<style>
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+</style>
 
 <body>
-  <h1>HEH</h1>
+  <div class="container m-5">
+    <table class="table">
+      <thead>
+        <tr class="table-secondary">
+          <th></th>
+          <th>Name</th>
+          <th>Created</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Dates</th>
+          <th></th>
+          <th><i class="bi bi-file-earmark-arrow-up"></i></i></th>
+          <th><i class="bi bi-trash3-fill"></i></th>
+        </tr>
+      </thead>
+      <tbody id="body-note-table">
+
+      </tbody>
+
+    </table>
+
+    <table class="table mt-5">
+      <thead>
+        <tr class="table-secondary px-5">
+          <th></th>
+          <th>Note Category</th>
+          <th>Active</th>
+          <th>Archived</th>
+        </tr>
+      </thead>
+      <tbody id="body-info-table">
+
+      </tbody>
+
+    </table>
+  </div>
+
+  <script src="/script.js"></script>
 </body>
 
 </html>
