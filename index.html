@@ -4,11 +4,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Task 1</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js "></script>
 </head>
 
 <body>
-  <h1>HEH</h1>
+  <div class="container ">
+    <table class="table">
+      <thead>
+        <tr class="table-secondary">
+          <th></th>
+          <th>Name</th>
+          <th>Created</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Dates</th>
+          <th></th>
+          <th><i class="bi bi-file-earmark-arrow-up"></i></i></th>
+          <th><i class="bi bi-trash3-fill"></i></th>
+        </tr>
+      </thead>
+      <tbody id="body-note-table">
+      </tbody>
+    </table>
+
+    <div class="collapse mb-5" id="update-note-form">
+    </div>
+
+    <div class="collapse" id="create-note-form">
+      <div class="d-flex justify-content-end">
+        <form id="newNotesForm" class="col-6">
+
+          <label for="name">Name</label>
+          <input type="text" class="form-control mb-3" id="name">
+
+
+          <label for="created">Created</label>
+          <input type="date" class="form-control mb-3" id="created">
+
+          <label class="d-block" for="category">Category</label>
+          <select class="form-select mb-3" aria-label="Default select example" id="category">
+            <option value="Idea" selected>Idea</option>
+            <option value="Task">Task</option>
+            <option value="RandomThought">Random Thought</option>
+          </select>
+
+          <label for="content">Content</label>
+          <input type="text" class="form-control mb-3" id="content">
+
+          <div class="d-flex justify-content-end mb-2">
+            <button type="submit" class="btn btn-primary" form="newNotesForm" id="submit-form-btn">Create note</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#create-note-form"
+        aria-expanded="false" aria-controls="create-note-form" id="open-close-form-btn">
+        Create note
+      </button>
+    </div>
+
+    <table class="table collapse" id="archivedNotesTable">
+      <thead>
+        <tr>
+          <th colspan="6">ARCHIVED NOTES</th>
+        </tr>
+        <tr class="table-secondary">
+          <th></th>
+          <th>Name</th>
+          <th>Created</th>
+          <th>Category</th>
+          <th>Content</th>
+          <th>Dates</th>
+          <th><i class="bi bi-file-earmark-arrow-up"></i></th>
+          <th>
+            <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+              data-bs-target="#archivedNotesTable" aria-expanded="false" aria-controls="archivedNotesTable"
+              id="open-close-form-btn">
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody id="body-archived-notes-table">
+      </tbody>
+    </table>
+
+    <table class="table mt-5">
+      <thead>
+        <tr class="table-secondary px-5">
+          <th></th>
+          <th>Note Category</th>
+          <th>Active</th>
+          <th>Archived</th>
+        </tr>
+      </thead>
+      <tbody id="body-info-table">
+
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="./crudNote.js"></script>
 </body>
 
 </html>
